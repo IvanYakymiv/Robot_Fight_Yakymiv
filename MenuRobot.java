@@ -20,24 +20,9 @@ public class MenuRobot extends Menu {
         String alphabet = "QWEASDZXC";
         if (alphabet.indexOf(currentButton) >= 0) {
             return false;
-        } else
+        }
         return true;
     }
-
-    public static void printFinalResult(Robot current, Robot second) {
-        Robot temp = null;
-        Robot temp2 = null;
-        if (current.getRobot_health() == 0){
-            temp = current;
-            temp2 = second;
-        }else{
-            temp = second;
-            temp2 = current;
-        }
-        System.out.println(temp.getRobot_name() + " was killed");
-        System.out.println(temp.getRobot_name() + " Win!!!");
-    }
-
 }
 
 

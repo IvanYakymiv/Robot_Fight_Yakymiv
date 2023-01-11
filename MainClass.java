@@ -42,8 +42,8 @@ public class MainClass {
                         currentButton = Menu.getCharFromConsole();
                     }
                 }
-                if (currentRobot.fightHash.containsKey(currentButton)) {
-                    currentRobot.setDamage(currentRobot.getRobot_health());
+                if (currentRobot.isFightButton(currentButton)) {
+                    secondRobot.setDamage();
                     System.out.println("Babah. Nice shot! " + secondRobot.getRobot_name() + " lost 20 points of the health! :)");
                     currentRobot.usedButtons.put(currentButton, 0);
                     currentRobot.fightHash.remove(currentButton);

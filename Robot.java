@@ -33,8 +33,8 @@ public class Robot {
         this.robot_health = robot_health;
     }
 
-    public void setDamage(int robot_health) {
-        this.robot_health = (robot_health - damage);
+    public void setDamage() {
+        this.robot_health = (getRobot_health() - damage);
     }
 
     char getRandomKey() {
@@ -65,4 +65,13 @@ public class Robot {
     HashMap<Character, Integer> notFightHash = notFightButtons();
 
     HashMap<Character, Integer> usedButtons = new HashMap<>();
+
+    public boolean isFightButton(char currentButton){
+        if(fightHash.containsKey(currentButton)){
+            return true;
+        }
+        return false;
+    }
+
+
 }

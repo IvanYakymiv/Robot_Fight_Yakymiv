@@ -15,6 +15,8 @@ import java.util.Scanner;
         public static char getCharFromConsole() {
             Scanner scanner = new Scanner(System.in);
             char temp = 'P';
+            System.out.println("");
+            System.out.println("*Only first character is processed!*");
             try {
                 char str = scanner.next().toUpperCase().charAt(0);
                 return str;
